@@ -2,20 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Categories;
+use App\Models\ProductSpecification;
 use Illuminate\Http\Request;
 
-class CategoriesController extends Controller
+class ProductSpecificationController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $categories = Categories::orderBy('id', 'DESC')->latest()->limit(6)->get();
-        return response()->json(['success' => true, 'data' => $categories], 200);
+        //
     }
 
     /**
@@ -42,23 +41,21 @@ class CategoriesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Categories  $categories
-     * @return \Illuminate\Http\JsonResponse
+     * @param  \App\Models\ProductSpecification  $productSpecification
+     * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(ProductSpecification $productSpecification)
     {
-        $category = Categories::find($id);
-        return response()->json(['success' => true, 'data' => $category], 200);
+        //
     }
-
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Categories  $categories
+     * @param  \App\Models\ProductSpecification  $productSpecification
      * @return \Illuminate\Http\Response
      */
-    public function edit(Categories $categories)
+    public function edit(ProductSpecification $productSpecification)
     {
         //
     }
@@ -67,10 +64,10 @@ class CategoriesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Categories  $categories
+     * @param  \App\Models\ProductSpecification  $productSpecification
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Categories $categories)
+    public function update(Request $request, ProductSpecification $productSpecification)
     {
         //
     }
@@ -78,10 +75,10 @@ class CategoriesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Categories  $categories
+     * @param  \App\Models\ProductSpecification  $productSpecification
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Categories $categories)
+    public function destroy(ProductSpecification $productSpecification)
     {
         //
     }
