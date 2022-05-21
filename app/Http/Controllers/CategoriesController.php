@@ -43,11 +43,12 @@ class CategoriesController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Categories  $categories
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function show(Categories $categories)
+    public function show($id)
     {
-        //
+        $category = Categories::find($id);
+        return response()->json(['success' => true, 'data' => $category], 200);
     }
 
     /**

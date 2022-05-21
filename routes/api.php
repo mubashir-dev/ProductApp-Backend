@@ -17,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
  Route::prefix('v1')->group(function(){
      //Brands
-     Route::get('/brnads',[BrandController::class,'index']);
-     Route::get('/catgories',[CategoriesController::class,'index']);
+     Route::get('/brands',[BrandController::class,'index']);
+     Route::get('/categories',[CategoriesController::class,'index']);
+     Route::get('/categories/{id}',[CategoriesController::class,'show']);
  });
 
