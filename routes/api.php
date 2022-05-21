@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\CategoriesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,5 +18,6 @@ use Illuminate\Support\Facades\Route;
  Route::prefix('v1')->group(function(){
      //Brands
      Route::get('/brnads',[BrandController::class,'index']);
+     Route::get('/catgories',[CategoriesController::class,'index']);
  });
 
